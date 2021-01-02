@@ -16,4 +16,8 @@ npm run dev
 yarn dev
 ```
 - Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-### To be continue with tests ..
+
+### Now with tests:
+You can find 1st testcase in `__tests__/index.test.js`
+- To run tests :
+- `npm run test`
