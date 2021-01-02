@@ -92,7 +92,7 @@ export default function Home() {
         
         <Container maxWidth="md">
           <form  noValidate autoComplete="off">
-            <Grid container xs={12}>
+            <Grid container item xs={12}>
               <Grid item xs={9}>
                 <InputBase
                   onInput={handleSetKeyword}
@@ -104,8 +104,8 @@ export default function Home() {
                 <FormControl >
                   <InputLabel id="sort-label">SORT</InputLabel>
                   <Select labelId="sort-label" id="sort-select" value={sort} onChange={handleSetSort}>
-                    {sortFields.map((field) => (
-                      <MenuItem value={field.key}>{field.value}</MenuItem>
+                    {sortFields.map((field, i) => (
+                      <MenuItem key={i} value={field.key}>{field.value}</MenuItem>
                     ))}
                   </Select>
                 </FormControl>
@@ -114,8 +114,8 @@ export default function Home() {
           </form>
 
           <List>
-            {restaurants.map((resturant) => (
-              <ListItem alignItems="flex-start">
+            {restaurants.map((resturant, index) => (
+              <ListItem alignItems="flex-start" key={index}>
                 <ListItemText primary={resturant.name}
                   secondary={
                     <React.Fragment>
